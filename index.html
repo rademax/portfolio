@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volodymyr Ishchenko — Full-Stack Laravel Developer</title>
+    <meta name="description" content="Full-Stack Laravel & Vue.js Developer based in Poland. Building scalable web applications, APIs, and integrations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <nav class="lang-nav">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pl">PL</button>
+        <button class="lang-btn" data-lang="ua">UA</button>
+    </nav>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">V<span class="accent">.</span>I</div>
+        <div class="nav-links">
+            <a href="#about" data-i18n="nav.about">About</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <a href="#services" data-i18n="nav.services">Services</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <button class="nav-burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <p class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</p>
+            <h1 class="hero-name">Volodymyr <span class="accent">Ishchenko</span></h1>
+            <div class="hero-typing">
+                <span class="typing-prefix">&gt; </span>
+                <span class="typing-text" id="typing-text"></span>
+                <span class="typing-cursor">_</span>
+            </div>
+            <p class="hero-desc" data-i18n="hero.desc">Full-Stack Developer specializing in Laravel & Vue.js. Building scalable web applications, REST APIs, and complex integrations.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Let's Talk</a>
+                <a href="#portfolio" class="btn btn-outline" data-i18n="hero.portfolio">View Work</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">5+</span>
+                    <span class="stat-label" data-i18n="hero.years">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">20+</span>
+                    <span class="stat-label" data-i18n="hero.projects">Projects Delivered</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label" data-i18n="hero.languages">Languages</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <h2 class="section-title" data-i18n="about.title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p data-i18n="about.p1">I'm a Full-Stack Developer based in Poland with 5+ years of experience building web applications for enterprise clients. Currently working at Semantics (a TransPerfect company), developing modular systems for translation workflow automation.</p>
+                <p data-i18n="about.p2">My core stack is Laravel + Vue.js 3, but I'm comfortable with the entire web development lifecycle — from database architecture and API design to responsive frontends and CI/CD pipelines.</p>
+                <p data-i18n="about.p3">I specialize in complex integrations between services, queue-based architectures (Amazon SQS), and building reliable systems that handle large-scale data processing.</p>
+                <div class="about-details">
+                    <div class="detail">
+                        <span class="detail-icon">📍</span>
+                        <span data-i18n="about.location">Łódź, Poland</span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-icon">🌐</span>
+                        <span data-i18n="about.langs">English, Ukrainian, Polish, Russian</span>
+                    </div>
+                    <div class="detail">
+                        <span class="detail-icon">💼</span>
+                        <span data-i18n="about.status">Available for freelance projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">volodymyr.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <pre><code><span class="t-green">volodymyr@dev</span>:<span class="t-blue">~</span>$ cat profile.json
+
+{
+  <span class="t-yellow">"name"</span>: <span class="t-green">"Volodymyr Ishchenko"</span>,
+  <span class="t-yellow">"role"</span>: <span class="t-green">"Full-Stack Developer"</span>,
+  <span class="t-yellow">"stack"</span>: [<span class="t-green">"Laravel"</span>, <span class="t-green">"Vue.js 3"</span>, <span class="t-green">"PHP 8"</span>],
+  <span class="t-yellow">"experience"</span>: <span class="t-purple">5</span>,
+  <span class="t-yellow">"location"</span>: <span class="t-green">"Poland 🇵🇱"</span>,
+  <span class="t-yellow">"available"</span>: <span class="t-purple">true</span>
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section section-alt" id="skills">
+        <h2 class="section-title" data-i18n="skills.title">Tech Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3 class="skill-cat-title">Backend</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Laravel / PHP 8</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">REST API Design</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">MySQL / PostgreSQL</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Queue Systems (SQS)</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Redis</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 class="skill-cat-title">Frontend</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Vue.js 3 / Composition API</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">JavaScript / TypeScript</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">HTML / CSS / SCSS</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Tailwind CSS</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3 class="skill-cat-title">DevOps & Tools</h3>
+                <div class="skill-items">
+                    <div class="skill-item">
+                        <span class="skill-name">Git / GitHub</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Docker</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">Linux / Nginx</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <span class="skill-name">CI/CD Pipelines</span>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <h2 class="section-title" data-i18n="services.title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 data-i18n="services.web.title">Web Applications</h3>
+                <p data-i18n="services.web.desc">Custom web applications built with Laravel & Vue.js. From MVPs to enterprise-grade systems with complex business logic.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔗</div>
+                <h3 data-i18n="services.api.title">API Development</h3>
+                <p data-i18n="services.api.desc">RESTful API design and development. Third-party service integrations, webhook handlers, queue-based architectures.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3 data-i18n="services.integration.title">System Integration</h3>
+                <p data-i18n="services.integration.desc">Connecting multiple services into a unified workflow. File processing pipelines, data synchronization, automated delivery systems.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🛠️</div>
+                <h3 data-i18n="services.legacy.title">Legacy Modernization</h3>
+                <p data-i18n="services.legacy.desc">Upgrading existing PHP applications to modern Laravel architecture. Code refactoring, performance optimization, security hardening.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3 data-i18n="services.dashboard.title">Admin Dashboards</h3>
+                <p data-i18n="services.dashboard.desc">Feature-rich admin panels with Vue.js. Real-time data, charts, user management, role-based access control.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🤖</div>
+                <h3 data-i18n="services.automation.title">Process Automation</h3>
+                <p data-i18n="services.automation.desc">Automating repetitive business processes. Scheduled tasks, notification systems, deadline monitoring, report generation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section section-alt" id="portfolio">
+        <h2 class="section-title" data-i18n="portfolio.title">Portfolio</h2>
+        <p class="section-subtitle" data-i18n="portfolio.subtitle">Selected projects I've worked on</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <span>🔄</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>File Delivery Platform</h3>
+                    <p data-i18n="portfolio.p1.desc">Multi-service integration platform for automated translation file delivery. Handles file processing between 4 services with queue-based architecture.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Vue.js 3</span>
+                        <span class="tag">Amazon SQS</span>
+                        <span class="tag">REST API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <span>🔁</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Translation Memory Sync</h3>
+                    <p data-i18n="portfolio.p2.desc">Automated synchronization system for translation memories. Users configure groups of up to 100 TMs with rules and scheduled sync intervals.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Scheduling</span>
+                        <span class="tag">Complex Rules</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <span>📊</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>Statistics Module</h3>
+                    <p data-i18n="portfolio.p3.desc">Automated statistics calculation for translation projects. Processes source & target language files, counts words/segments, delivers reports via email.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">File Processing</span>
+                        <span class="tag">Email Reports</span>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-card coming-soon">
+                <div class="portfolio-image">
+                    <div class="portfolio-placeholder">
+                        <span>🚀</span>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3 data-i18n="portfolio.p4.title">Your Project?</h3>
+                    <p data-i18n="portfolio.p4.desc">Have an idea? Let's build it together. I'm always excited about new challenges and interesting projects.</p>
+                    <a href="#contact" class="btn btn-primary btn-sm" data-i18n="portfolio.p4.cta">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Have a project in mind? Drop me a message.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">💼</span>
+                    <a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✈️</span>
+                    <a href="https://t.me/Volodymyr95" target="_blank" rel="noopener">Telegram</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:rademaxbh@gmail.com">rademaxbh@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🐙</span>
+                    <a href="https://github.com/rademax" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <input type="text" placeholder="Name" data-i18n-placeholder="contact.name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Tell me about your project..." data-i18n-placeholder="contact.message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Volodymyr Ishchenko. <span data-i18n="footer.built">Built with</span> ☕ <span data-i18n="footer.and">&</span> Laravel <span data-i18n="footer.spirit">spirit</span>.</p>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
